@@ -1,5 +1,4 @@
 var lastClick;
-var test = "tri";
 
 $(document).ready(function() {
 	var docLocHref = document.location.href;
