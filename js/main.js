@@ -42,13 +42,14 @@ $(document).ready(function() {
 	
 });
 
-function open_guide() {
+
+function open_window(section_id) {
 	var guide_background = document.createElement('div');
 	var guide = document.createElement('div');
 	var guide_inner = document.createElement('div');
 	var guide_close = document.createElement('div');
 
-	guide_inner.innerHTML = $('#student101').html();
+	guide_inner.innerHTML = $(section_id).html();
 	guide_close.innerHTML = '<img src="graphics/close.png" alt="close">';
 
 	guide_background.setAttribute('class', 'guide_background');
