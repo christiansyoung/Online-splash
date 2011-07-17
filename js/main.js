@@ -1,8 +1,8 @@
 var lastClick;
 
 $(document).ready(function() {
-	var docLocHref = document.location.href;
-	var pageRequest = docLocHref.substring(docLocHref.indexOf('#') + 1, docLocHref.length);
+	var docLocHref 		= document.location.href;
+	var pageRequest 	= docLocHref.substring(docLocHref.indexOf('#') + 1, docLocHref.length);
 	
 	
 	lastClick = $('#link_online');
@@ -43,21 +43,21 @@ $(document).ready(function() {
 
 
 function open_window(section_id) {
-	var guide_background = document.createElement('div');
-	var guide = document.createElement('div');
-	var guide_inner = document.createElement('div');
-	var guide_close = document.createElement('div');
+	var guide_background 	= document.createElement('div');
+	var guide 				= document.createElement('div');
+	var guide_inner 		= document.createElement('div');
+	var guide_close 		= document.createElement('div');
 
-	guide_inner.innerHTML = $(section_id).html();
-	guide_close.innerHTML = '<img src="graphics/close.png" alt="close">';
+	guide_inner.innerHTML 	= $(section_id).html();
+	guide_close.innerHTML 	= '<img src="graphics/close.png" alt="close">';
 
-	guide_background.setAttribute('class', 'guide_background');
-	guide.setAttribute('class', 'guide');
+	guide_background.setAttribute('id', 'guide_background');
+	guide.setAttribute('id', 'guide');
 	guide_inner.setAttribute('class', 'guide_inner');
 	guide_close.setAttribute('class', 'guide_close');
 
 	guide.appendChild(guide_inner);
-	guide.appendChild(guide_close);
+	guide_background.appendChild(guide_close);
 	guide_background.appendChild(guide);
 
 	$('body').append(guide_background).hide().fadeIn(400);
@@ -77,6 +77,7 @@ function open_window(section_id) {
 	$(guide).click(function(e) {
 		e.stopPropagation();
 	});
+	innerScroll = new iScroll(guide_inner);
 }
 
 var change_page = function(name) {

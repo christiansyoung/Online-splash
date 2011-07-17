@@ -23,6 +23,8 @@
 	
 	<script src="js/jquery.js"></script>
 	<script src="js/main.js"></script>
+	<script src="js/iscroll-min.js"></script>
+
 </head>
 <body>
 
@@ -351,6 +353,12 @@
 	</section>
 	<!--/[mod:Ny i Trondheim]-->
 	
+	<script>
+	function loaded() {
+		document.addEventListener('touchmove', function(e){ e.preventDefault(); });
+	}
+	document.addEventListener('DOMContentLoaded', loaded);
+	</script>
 	
 	<script type="text/javascript"> 
 		var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
