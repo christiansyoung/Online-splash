@@ -4,7 +4,6 @@
 <head>
 	<title>Online</title>
 
-	<meta name="viewport" content="width = 960, user-scalable = no">
 	<meta charset="UTF-8" />
 	<meta name="description" content="Linjeforeningen Online ved NTNU for informatikkstudenter"/> 
 	<meta name="keywords" content="linjeforening, online, ntnu, informatikk, student, data, studie, linux, windows, programmering, utvikling, kurs, bedpres"/>
@@ -23,6 +22,8 @@
 	
 	<script src="js/jquery.js"></script>
 	<script src="js/main.js"></script>
+	<script src="js/iscroll-min.js"></script>
+
 </head>
 <body>
 
@@ -48,6 +49,7 @@
 			<a href="http://steria.no/"><img id="partner" src="graphics/steria.png"></a>
 		</footer>
 		
+		<div class="clear"></div>
 	</section>
 	<!--/[main section]-->
 
@@ -213,9 +215,8 @@
 					
 				</a>
 				<p class="contact">Dersom du lurer på noe, ikke nøl med å ta kontakt! Vi kan også nås per mail, <a href="mailto:kontakt@online.ntnu.no">kontakt@online.ntnu.no</a></p>
-			</div>
 
-			<div class="clear"></div>
+			</div>
 			
 		</article>
 
@@ -351,6 +352,12 @@
 	</section>
 	<!--/[mod:Ny i Trondheim]-->
 	
+	<script>
+	function loaded() {
+		document.addEventListener('touchmove', function(e){ e.preventDefault(); });
+	}
+	document.addEventListener('DOMContentLoaded', loaded);
+	</script>
 	
 	<script type="text/javascript"> 
 		var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
@@ -362,6 +369,6 @@
 		} 
 		catch (err) {}
 	</script> 
-
+	
 </body>
 </html>
