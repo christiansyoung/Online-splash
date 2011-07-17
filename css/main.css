@@ -1,7 +1,11 @@
+html {
+	height: 100%;
+}
 body {
 	font: 15px/23px 'Ubuntu', arial, serif;
 	background: #001932 url(../graphics/splash.jpg) no-repeat center center fixed;
 	color: #ccc;
+	height: 100%;
 }
 h1 {
 	font-size: 25px;
@@ -321,8 +325,7 @@ article.cal h4 {
 }
 
 
-.guide_background {
-
+#guide_background {
 	font: 11px/18px;
 	position: absolute;
 	left: 0;
@@ -335,10 +338,14 @@ article.cal h4 {
 }
 
 
-.guide {
+#guide {
 	width: 800px;
 	height: 500px;
-	position: absolute;
+
+	position:absolute;
+    z-index:1;
+    overflow: auto;
+
 	top: 50%;
 	left: 50%;
 	margin: -250px 0 0 -400px;
@@ -350,8 +357,7 @@ article.cal h4 {
 	color: #444;
 	font-size: 12px;
 	line-height: 18px;
-	height: 420px;
-	overflow: auto;
+	
 }
 .guide_inner ul li {
 	list-style: disc;
@@ -362,9 +368,11 @@ article.cal h4 {
 }
 .guide_close {
 	position: absolute;
-	top: -15px;
-	right: -15px;
+	top: 50%;
+	right: 50%;
+	margin: -262px -410px 0 0;
 	cursor: pointer;
+	z-index: 10;
 }
 
 h5 {
