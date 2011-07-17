@@ -205,11 +205,10 @@ h3 {
 	font-size: 11px;
 }
 
-#facebook {
+a#facebook {
 	width: 160px;
 	height: 55px;
-	border-radius: 5px;
-	background: #ddd url(../graphics/face.png) repeat-x;
+	background: transparent url(../graphics/facebook.png) no-repeat;
 	margin-right: 20px;
 }
 
@@ -219,12 +218,19 @@ h3 {
 	color: #FFF;
 }
 
-#twitter {
+a#twitter {
 	width: 160px;
 	height: 55px;
-	border-radius: 8px;
-	background: #ddd url(../graphics/twitter.png) repeat-x;
+	background: transparent url(../graphics/twitter.png) no-repeat;
 }
+a:hover#twitter {
+	background: transparent url(../graphics/twitter_hover.png) no-repeat;
+}
+
+a:hover#facebook {
+	background: transparent url(../graphics/facebook_hover.png) no-repeat;
+}
+
 .mid_text {
 	float: left;
 	margin: 15px 18px 0 0;
