@@ -1,11 +1,13 @@
 html {
 	height: 100%;
+	width: 100%;
 }
 body {
 	font: 15px/23px 'Ubuntu', arial, serif;
 	background: #001932 url(../graphics/splash.jpg) no-repeat center center fixed;
 	color: #ccc;
 	height: 100%;
+	width: 100%;
 }
 h1 {
 	font-size: 25px;
