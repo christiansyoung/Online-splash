@@ -1,7 +1,11 @@
+html {
+	height: 100%;
+}
 body {
 	font: 15px/23px 'Ubuntu', arial, serif;
 	background: #001932 url(../graphics/splash.jpg) no-repeat center center fixed;
 	color: #ccc;
+	height: 100%;
 }
 h1 {
 	font-size: 25px;
@@ -9,12 +13,19 @@ h1 {
 	margin: 0 0 4px 0;
 	color: #fff;
 }
+h6 {
+	font-weight: bold;
+	margin: 0 0 5px 0;
+}
 .hide {
 
 }
 
 p {
 	margin: 0 0 15px 0;
+}
+strong {
+	font-weight: bold;
 }
 a {
 	text-decoration: none;
@@ -31,7 +42,7 @@ a:hover {
 	top: 50%;
 	left: 50%;
 	margin-left: -480px;
-	margin-top: -240px;
+	margin-top: -260px;
 	text-align: left;
 }
 
@@ -120,7 +131,7 @@ footer p {
 	height: 400px;
 }
 .fadderukene {
-	background: url(../graphics/fadderukene.png) no-repeat 0 10px;
+	background: url(../graphics/fadderukene.png) no-repeat 0 30px;
 	height: 400px;
 }
 .mer {
@@ -131,7 +142,8 @@ footer p {
 
 .mer .left,
 .mer .mid,
-.mer .right {
+.mer .right,
+.bedrift {
 	
 	font-size: 12px;
 }
@@ -155,12 +167,11 @@ footer p {
 .mer p {
 	line-height: 20px;
 }
-
 h3 {
 	font-weight: bold;
 	font-size: 14px;
 	color: #FFF;
-	margin: 0 0 8px 0;
+	margin: 0 0 5px 0;
 }
 
 
@@ -198,11 +209,10 @@ h3 {
 	font-size: 11px;
 }
 
-#facebook {
+a#facebook {
 	width: 160px;
 	height: 55px;
-	border-radius: 5px;
-	background: #ddd url(../graphics/face.png) repeat-x;
+	background: transparent url(../graphics/facebook.png) no-repeat;
 	margin-right: 20px;
 }
 
@@ -212,12 +222,19 @@ h3 {
 	color: #FFF;
 }
 
-#twitter {
+a#twitter {
 	width: 160px;
 	height: 55px;
-	border-radius: 8px;
-	background: #ddd url(../graphics/twitter.png) repeat-x;
+	background: transparent url(../graphics/twitter.png) no-repeat;
 }
+a:hover#twitter {
+	background: transparent url(../graphics/twitter_hover.png) no-repeat;
+}
+
+a:hover#facebook {
+	background: transparent url(../graphics/facebook_hover.png) no-repeat;
+}
+
 .mid_text {
 	float: left;
 	margin: 15px 18px 0 0;
@@ -308,8 +325,7 @@ article.cal h4 {
 }
 
 
-.guide_background {
-
+#guide_background {
 	font: 11px/18px;
 	position: absolute;
 	left: 0;
@@ -322,10 +338,14 @@ article.cal h4 {
 }
 
 
-.guide {
+#guide {
 	width: 800px;
 	height: 500px;
-	position: absolute;
+
+	position:absolute;
+    z-index:1;
+    overflow: auto;
+
 	top: 50%;
 	left: 50%;
 	margin: -250px 0 0 -400px;
@@ -337,8 +357,7 @@ article.cal h4 {
 	color: #444;
 	font-size: 12px;
 	line-height: 18px;
-	height: 420px;
-	overflow: auto;
+	
 }
 .guide_inner ul li {
 	list-style: disc;
@@ -349,15 +368,22 @@ article.cal h4 {
 }
 .guide_close {
 	position: absolute;
-	top: -15px;
-	right: -15px;
+	top: 50%;
+	right: 50%;
+	margin: -262px -410px 0 0;
 	cursor: pointer;
+	z-index: 10;
 }
+
 h5 {
 	font-weight: bold;
 	margin: 0 0 8px 0;
 	font-size: 14px;
 }
-
+h5.kurs {
+	border-top: 1px dotted #888;
+	padding: 15px 0;
+	
+}
 
 .clear { clear: both; }

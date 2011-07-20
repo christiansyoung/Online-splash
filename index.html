@@ -2,10 +2,11 @@
 
 <html>
 <head>
-	<meta charset=utf-8>
 	<title>Online</title>
 
-	<meta name="viewport" content="width = 960, user-scalable = no"> 
+	<meta charset="UTF-8" />
+	<meta name="description" content="Linjeforeningen Online ved NTNU for informatikkstudenter"/> 
+	<meta name="keywords" content="linjeforening, online, ntnu, informatikk, student, data, studie, linux, windows, programmering, utvikling, kurs, bedpres"/>
 	
 	<script>
     document.createElement('header');
@@ -21,6 +22,8 @@
 	
 	<script src="js/jquery.js"></script>
 	<script src="js/main.js"></script>
+	<script src="js/iscroll-min.js"></script>
+
 </head>
 <body>
 
@@ -46,6 +49,7 @@
 			<a href="http://steria.no/"><img id="partner" src="graphics/steria.png"></a>
 		</footer>
 		
+		<div class="clear"></div>
 	</section>
 	<!--/[main section]-->
 
@@ -68,7 +72,7 @@
 			<p>I fadderukene skal du få bli kjent med både linjeforeningen, NTNU og mange medstudenter. Dette er den viktigste portalen for å stifte bekjentskaper som varer studietiden ut. Vi i Online anbefaler alle å ta del i det supre fadderopplegget vårt!</p>
 			<p>Fadderukene starter etter immatrikuleringen den 16. august.</p>
 
-			<p>Se også vår <a href="#" onclick="open_guide(); return false;">Ny i Trondheim</a>-guide.</p>
+			<p>Se også vår <a href="#" onclick="open_window('#student101'); return false;">Ny i Trondheim</a>-guide.</p>
 
 		</article>
 		</div>
@@ -189,41 +193,85 @@
 
 			<div class="left">
 				<h3>Wiki</h3>
-				<p>Lurer du på linjeforeningens historie? Vil du vite mer om komiteene, NTNU og fag? Besøk vår wiki, den utimate kilden til nyttig og unyttig kunnskap!</p>
-				<p><a href="https://trac.online.ntnu.no/projects/online/wiki">Gå til wikien</a></p>
+				<p>Vil du lese om linjeforeningens historie? Vil du vite mer om komiteene, NTNU, emner, sekkemannen, ugleKom og mye mer? Besøk vår wiki, den utimate kilden til nyttig og unyttig kunnskap! <a href="https://trac.online.ntnu.no/projects/online/wiki">Gå til wikien</a>.</p>
 			</div>
 			
 			<div class="mid">
 				<h3>IRC</h3>
 				<p>Join <a href="irc://irc.freenode.net/online">#online</a> på irc.freenode.net, eller <a href="http://webchat.freenode.net/?channels=online">start webchat</a>.</p>
+			
+				<h3>Bedrifter</h3>
+				<p>Er du bedrift på jakt etter bedriftspresentasjon eller kurs? Klikk <a href="#" onclick="open_window('#bedrifter'); return false;">her</a> for mer informasjon.</p>
 			</div>
-
 
 			<div class="right" id="social">
 
 				<h3>Mer Online</h3>
 				<a href="http://facebook.com/linjeforeningenonline/" id="facebook">
-					<div id="facebook_inner">
-						<h2>Følg oss</h2>
-						<p>På Facebook</p>
-					</div>
+					
 				</a>
-				<div class="mid_text">- og -</div>
+				<div class="mid_text"></div>
 				<a href="http://twitter.com/online_ntnu/"  id="twitter">
-					<div id="twitter_inner">
-						<h2>Følg oss</h2>
-						<p>På Twitter</p>
-					</div>
+					
 				</a>
 				<p class="contact">Dersom du lurer på noe, ikke nøl med å ta kontakt! Vi kan også nås per mail, <a href="mailto:kontakt@online.ntnu.no">kontakt@online.ntnu.no</a></p>
+
 			</div>
-
-			<div class="clear"></div>
-
+			
 		</article>
 
 	</section>
 
+
+	<!--[mod:Samarbeid med næringslivet]-->
+	<section id="bedrifter" class="hidden">
+		<h2>Samarbeid med næringslivet</h2>
+		<p>Linjeforeningen har gjennom flere år opparbeidet seg et repertoar av tjenester som vi tilbyr våre studenter. I samarbeid med næringslivet tilbyr vi kurs og bedriftspresentasjoner for å gi studentene våre en bredere og dypere fagkunnskap samt et innblikk i hverdagen i aktuelle på arbeidsplasser.</p>
+		
+		<h5>Bedpres</h5>
+		<p>
+			<strong>Komite:</strong> Bedriftskomiteen - <a href="mailto:bedkom@online.ntnu.no">bedkom@online.ntnu.no</a><br>
+			<strong>Lengde:</strong> 45 minutt<br>
+			<strong>Innhold:</strong> Helt valgfritt<br>
+		</p>
+
+
+		 <p>Vi får ganske regelmessig besøk fra både små og store IT-bedrifter som har behov for dyktige utviklere, konsulenter og systemarkitekter o.l. En bedriftspresentasjon gir hovedsaklig en mulighet for å opprette kontakt mellom bedrift og aktuelle studenter. Rekruttering gjennom denne kanalen er veldig aktuell og de aller fleste studentene bruker dette som et springbrett for sin karriere.</p>
+		
+		<h6>Gjennomføring av presentasjon</h6>
+
+		<p>Dette er et eksempel på hvordan mange bedrifter velger å gjøre det, men er på ingen måte en fasit. Noen bedrifter har valgt å gå utenfor denne «malen» med suksess, så det er alltid rom for nye ideer. Bedriftspresentasjonene blir vanligvis gjennomført på Gløshaugen, med påfølgende servering i en uformell setting, hvor det kan stilles spørsmål og der studentene kan bli kjent med dere og omvendt. Vi stiller med lokaler, markedsføring, påmelding og deltagere. I tillegg tilrettelegger vi servering og eventuell transport etter ønske og behov. Fra deres side håper vi at dere stiller med motiverte ansatte som leverer en informativ og hyggelig presentasjon, og som kan svare på de spørsmål studentene måtte ha.</p>
+		
+		<h6>Målgruppe for bedriften</h6>
+
+		<p>Som nevnt består informatikk av både års-, bachelor og masterstudie. De fleste bedrifter henvender seg til masterstudentene våre, men det skal nevnes at bachelorstudentene også har et fullverdig studium.</p>
+		
+		
+		
+		
+		
+		<h5 class="kurs">Kurs</h5>
+
+		<p>
+			<strong>Komité:</strong> Fagkomiteen - <a href="mailto:fagkom@online.ntnu.no">fagkom@online.ntnu.no</a><br>
+			<strong>Lengde:</strong> Individuelt<br>
+			<strong>Innhold:</strong> 5 minutter presentasjon av bedriften, resten må vere faginnhold
+		</p>
+
+		<p>Studentene ved informatikk har mange ulike interesser og det er alltid gøy å se hva bedrifter holder på med. Det har blitt gjennomført kurs i for eksempel Ruby on Rails, Test Driven Development, Scrum og mye mer.</p>
+		 
+		<h6>Gjennomføring av kurs</h6>
+
+		<p>I motsetning til bedriftspresentasjoner er det begrensinger på hvor lenge bedriften kan fortelle om seg selv. Det er ment som et faglig tilskudd til studiet og innholdet må gjenspeile dette. Selve kursgjennomføringen er ofte litt mer uformell enn ved en bedriftspresentasjon. Det å få studentene til å vere med er viktig. Som ved en bedriftspresentasjon vil vi ordne det meste, ved spesialbehov gjør vi vårt beste for å ordne dette også.</p>
+		
+		<h6>Målgruppe for kurs</h6>
+
+		<p>Da kurs gjerne ikke er direkte rettet for rekruttering er det mye vanligere å åpne for alle årstrinn slik at folk med alle mulige interesser kan delta. Det er selvsagt en del kurs som krever forkunnskaper, men det er bare å spesifisere i eventen.</p>
+	</section>
+	<!--/[mod:Samarbeid med næringslivet]-->
+
+
+	<!--[mod:Ny i Trondheim]-->
 	<section id="student101" class="hidden">
 		<h2>Ny i Trondheim</h2>
 
@@ -269,7 +317,7 @@
 		<h5>Søk lån hos Lånekassen</h5>
 
 		<p>Da Lånekassen har en enorm pågang rundt semesterstart, er det en god idé å søke om lån så fort du har muligheten. I de første par ukene etter semesterstart har Lånekassen ofte en behandlingstid på opptil åtte uker, så det er lurt å være tidlig ute hvis du trenger pengene fort. Heldigvis får du ikke noe mindre penger dersom du er treig med å søke, men de kan komme godt med i fadderukene. Gå inn på <a href="http://www.lanekassen.no/Soknader/Nettsoknaden/">http://www.lanekassen.no/Soknader/Nettsoknaden/</a> for å søke om lån.</p>
-
+		
 
 		<h5>Ordne brukerkontoer på NTNUs datasystemer</h5>
 
@@ -302,19 +350,23 @@
 		<p>Dagene med arrangement fra skolens side er ganske korte og lite anstrengende, så etter skoletid sørger fadderopplegget fra Online for at man blir bedre kjent med studentlivet samt de andre folkene som tar Informatikk. Fadderuka er en fantastisk mulighet til å få vite mer om de forskjellige tingene byen kan tilby, som fritidsaktiviteter, hobbyer, kulturarrangmeneter, fester og turer, og vi oppforder alle til å henge med på opplegget i fadderukene. Det er _meningen_ at du skal bli sliten i løpet av fadderukene, og derfor er det lagt inn dager i programmet som er roligere enn de andre, slik at man får sjansen til å komme til hektene igjen. </p>
 
 	</section>
+	<script>
+	function loaded() {
+		document.addEventListener('touchmove', function(e){ e.preventDefault(); });
+	}
+	document.addEventListener('DOMContentLoaded', loaded);
+	</script>
+    <script type="text/javascript">
 
-<script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-9905766-1']);
+      _gaq.push(['_trackPageview']);
 
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-9905766-1']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-
-</script>
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
 </body>
 </html>
