@@ -1,11 +1,13 @@
 html {
 	height: 100%;
+	width: 100%;
 }
 body {
 	font: 15px/23px 'Ubuntu', arial, serif;
 	background: #001932 url(../graphics/splash.jpg) no-repeat center center fixed;
 	color: #ccc;
 	height: 100%;
+	width: 100%;
 }
 h1 {
 	font-size: 25px;
@@ -272,8 +274,16 @@ article.cal ul li {
 	float: left;
 }
 
+article.cal ul li.pm {
+	background: transparent url(../graphics/gradient_pm.png) repeat-x !important;
+}
+
 article.cal ul li:hover {
 	background: transparent url(../graphics/gradient_hover.png) repeat-x;
+}
+
+article.cal ul li:hover.pm {
+	background: transparent url(../graphics/gradient_hover_pm.png) repeat-x !important;
 }
 
 article.cal ul li span {
@@ -305,6 +315,8 @@ article.cal ul li div {
 	font-size: 12px;
 	border-radius: 8px;
 }
+
+
 
 article.cal ul li > p {
 	line-height: 18px;
