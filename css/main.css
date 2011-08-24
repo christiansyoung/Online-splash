@@ -274,8 +274,16 @@ article.cal ul li {
 	float: left;
 }
 
+article.cal ul li.pm {
+	background: transparent url(../graphics/gradient_pm.png) repeat-x !important;
+}
+
 article.cal ul li:hover {
 	background: transparent url(../graphics/gradient_hover.png) repeat-x;
+}
+
+article.cal ul li:hover.pm {
+	background: transparent url(../graphics/gradient_hover_pm.png) repeat-x !important;
 }
 
 article.cal ul li span {
@@ -307,6 +315,8 @@ article.cal ul li div {
 	font-size: 12px;
 	border-radius: 8px;
 }
+
+
 
 article.cal ul li > p {
 	line-height: 18px;
