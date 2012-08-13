@@ -29,16 +29,26 @@ $(document).ready(function() {
 				change_page('online');
 		}
 	});
+	var isIOS = navigator.userAgent.match(/(iPod|iPhone|iPad)/);
+	if (isIOS) {
+		$(document).on('touchstart', '.cal li', function() {
+			var isHidden = $('div', this).hasClass('hidden');
+			$('.calendar li div').addClass('hidden');
+			if (isHidden) {
+				$('div', this).removeClass('hidden');
+			}
+		});
+	}
+	else {
+		$(document).on('click', '.cal li', function() {
+			var isHidden = $('div', this).hasClass('hidden');
+			$('.calendar li div').addClass('hidden');
+			if (isHidden) {
+				$('div', this).removeClass('hidden');
+			}
+		});
+	}
 
-	$('.cal li').live({
-		mouseenter: function() {
-			$('div', this).removeClass('hidden');
-		},
-		mouseleave: function() {
-			$('div', this).addClass('hidden');
-		}
-	});
-	
 });
 
 
